@@ -1,0 +1,7 @@
+<?php
+class Fruit {
+		private $db;
+        public function __construct() {
+            $this->db = new Database;
+	}
+}
