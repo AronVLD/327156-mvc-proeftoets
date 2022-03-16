@@ -1,13 +1,14 @@
 <?php
 class Fruits extends Controller {
     public function __construct() {
-        //$this->userModel = $this->model('User');
+        $this->fruitModel = $this->model('Fruit');
     }
 
     public function index() {
+        $fruitData = $this->fruitModel->getFruits();
         $data = [
             'title' => 'Home page',
-            'randomtext' => 'Met fruit kom je er altijd uit'
+            'fruitData' => $fruitData
         ];
 
         $this->view('fruits/index', $data);
